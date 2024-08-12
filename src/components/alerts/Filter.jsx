@@ -23,12 +23,12 @@ const SearchBar = ({ setSearchText, setVehicleNumber, setStartDate, setEndDate }
   }, []);
 
   return (
-    <div className="flex items-center space-x-4 mb-4">
-      <input type="text" placeholder="Search" className="p-2 border rounded w-1/4" onChange={(e) => setSearchText(e.target.value)} />
-      <div className="relative w-1/4">
+    <div className="flex items-center space-x-4 mb-4 max-sm:flex-col max-sm:gap-4">
+      <input type="text" placeholder="Search" className="p-2 border rounded w-full" onChange={(e) => setSearchText(e.target.value)} />
+      <div className="w-full">
         <Select options={vehicleOptions} placeholder="Vehicle #" className="text-base" onChange={(selectedOption) => setVehicleNumber(selectedOption.label)} />
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 w-ful">
         <label className="flex items-center space-x-2">
           <span className="font-bold">Date Range:</span>
           <input type="date" className="p-2 border rounded" onChange={(e) => setStartDate(e.target.value)} />
