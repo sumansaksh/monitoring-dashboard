@@ -50,7 +50,7 @@
       "vehicle_friendly_name": "KA12A3456",
       "timestamp": "2023-03-01T04:25:45.424Z",
       "false_alarm": false,
-      "falseAlarm": false
+      "falseAlarm": true
     },
     {
       "id": "5149dbd2-45bc-4e34-9ea2-c82ced0279f1",
@@ -69,7 +69,8 @@
       "driver_friendly_name": "Mukesh",
       "vehicle_friendly_name": "KA13B4567",
       "timestamp": "2023-03-02T05:25:45.424Z",
-      "false_alarm": false
+      "false_alarm": false,
+      "falseAlarm": true
     },
     {
       "id": "6349dbd2-45bc-4e34-9ea2-c82ced0279f3",
@@ -96,7 +97,8 @@
       "driver_friendly_name": "Dinesh",
       "vehicle_friendly_name": "MH16E7890",
       "timestamp": "2023-03-03T08:25:45.424Z",
-      "false_alarm": false
+      "false_alarm": false,
+      "falseAlarm": false
     },
     {
       "id": "6649dbd2-45bc-4e34-9ea2-c82ced0279f6",

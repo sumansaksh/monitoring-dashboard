@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 
-const SearchBar = ({ setSearchText, setVehicleNumber, setStartDate, setEndDate }) => {
+const SearchBar = ({ setSearchText, setVehicleNumber, setStartDate, setEndDate, startDate, endDate }) => {
   const [vehicleOptions, setVehicleOptions] = useState([]);
 
   useEffect(() => {
@@ -28,12 +28,34 @@ const SearchBar = ({ setSearchText, setVehicleNumber, setStartDate, setEndDate }
       <div className="w-full">
         <Select options={vehicleOptions} placeholder="Vehicle #" className="text-base" onChange={(selectedOption) => setVehicleNumber(selectedOption.label)} />
       </div>
-      <div className="flex space-x-4 w-ful">
+      <div className="flex space-x-4 w-full">
         <label className="flex items-center space-x-2">
           <span className="font-bold">Date Range:</span>
-          <input type="date" className="p-2 border rounded" onChange={(e) => setStartDate(e.target.value)} />
+          <input
+            type="date"
+            className="p-2 border rounded"
+            value={startDate}
+            onChange={(e) => {
+              const newStartDate = e.target.value;
+              if (newStartDate > endDate) {
+                setEndDate(newStartDate);
+              }
+              setStartDate(newStartDate);
+            }}
+          />
           <span className="mx-1">to</span>
-          <input type="date" className="p-2 border rounded" onChange={(e) => setEndDate(e.target.value)} />
+          <input
+            type="date"
+            className="p-2 border rounded"
+            value={endDate}
+            onChange={(e) => {
+              const newEndDate = e.target.value;
+              if (newEndDate < startDate) {
+                setStartDate(newEndDate);
+              }
+              setEndDate(newEndDate);
+            }}
+          />
         </label>
       </div>
     </div>

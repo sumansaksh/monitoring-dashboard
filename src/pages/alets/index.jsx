@@ -44,7 +44,7 @@ const HomePage = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Driver Monitoring Alerts</h1>
-      <SearchBar setSearchText={setSearchText} setVehicleNumber={setVehicleNumber} setStartDate={setStartDate} setEndDate={setEndDate} />
+      <SearchBar setSearchText={setSearchText} setVehicleNumber={setVehicleNumber} setStartDate={setStartDate} setEndDate={setEndDate} startDate={startDate} endDate={endDate} />
       <AlertList alerts={filteredAlerts} />
     </div>
   );
