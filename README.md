@@ -14,8 +14,7 @@ The backend leverages `json-server` to create a mock REST API. `json-server` pro
 
 ### Frontend
 
-The frontend of the project is developed using React. It employs Tailwind CSS for styling. For handling dates and times, the application utilizes the `dayjs` library, which provides a simple and lightweight solution. Additionally, `react-select` is used for enhanced select input components, offering a customizable and feature-rich experience.
-
+The frontend of the project is developed using React and employs Tailwind CSS for styling. For handling dates and times, the application utilizes the `dayjs` library, which provides a simple and lightweight solution. Additionally, `react-select` is used for enhanced select input components, offering a customizable and feature-rich experience. The project also uses React Icons for any icon-related elements, such as notifications.
 **Command to run the frontend:**
 
 `npm start`
