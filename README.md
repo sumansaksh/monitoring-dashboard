@@ -10,7 +10,7 @@ The backend leverages `json-server` to create a mock REST API. `json-server` pro
 
 **Command to run the backend:**
 
-`npm start server`
+`npm run server`
 
 ### Frontend
 
